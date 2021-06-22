@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import ora from 'ora';
 import path from 'path';
 import progress from 'progress-stream';
-import youtubedl from 'youtube-dl-exec';
+import youtubedl from 'youtube-dl';
 import {
   downloadYoutubeSubtitles,
   filenamify,
@@ -123,7 +123,7 @@ function downloadYoutubeHelper(videoId, outputPath, prefix, title, format) {
     });
 
     const spinnerInfo = ora(`Getting Youtube video (id=${videoId}) information with quality="${format}"`).start();
-    const video = youtubedl.raw(urlYoutube, argsYoutube);
+    const video = youtubedl(urlYoutube, argsYoutube);
 
     video.on('info', (info) => {
       spinnerInfo.succeed();
