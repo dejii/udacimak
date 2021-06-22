@@ -1,15 +1,15 @@
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
 exports.default = fetchApiUdacityGraphql;
 
-var _request = _interopRequireDefault(require("request"));
+const _request = _interopRequireDefault(require('request'));
 
-var _utils = require("../commands/utils");
+const _utils = require('../commands/utils');
 
-var _config = require("../config");
+const _config = require('../config');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34,7 +34,7 @@ function fetchApiUdacityGraphql(url, queryGraphql, udacityAuthToken = '') {
     // https://github.com/request/request/issues/2047#issuecomment-272473278
     // avoid socket hang up error
     Connection: 'keep-alive',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36',
   };
   const method = 'POST';
   const requestOptions = {
@@ -43,7 +43,7 @@ function fetchApiUdacityGraphql(url, queryGraphql, udacityAuthToken = '') {
     method,
     headers,
     // avoid socket hang up error
-    forever: true
+    forever: true,
   };
   return new Promise((resolve, reject) => {
     (0, _request.default)(requestOptions, (error, res) => {
