@@ -1,13 +1,13 @@
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
 exports.default = fetchUdacityUserInfo;
 
-var _config = require("../config");
+const _config = require('../config');
 
-var _ = require(".");
+const _ = require('.');
 
 /**
  * Fetch User information from Udacity API

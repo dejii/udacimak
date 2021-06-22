@@ -1,11 +1,11 @@
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
 exports.default = fetchProjectRubric;
 
-var _ = require(".");
+const _ = require('.');
 
 /**
  * Fetch project rubric from Udacity API
